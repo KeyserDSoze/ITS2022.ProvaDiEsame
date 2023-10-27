@@ -134,7 +134,10 @@ namespace ITS2022.Zoo.Library
             Space();
             Console.WriteLine($"Il numero di animali è: {_database.Animals.Count}");
             Console.WriteLine($"Il numero di gabbie è: {_database.Cages.Count}");
-            Console.WriteLine($"La gabbia con più animali è: {_database.Cages.OrderByDescending(x => x.Animals.Count).FirstOrDefault()?.Name}");
+            if (_database.Cages.Any(x => x.Animals.Count > 0))
+                Console.WriteLine($"La gabbia con più animali è: {_database.Cages.OrderByDescending(x => x.Animals.Count).FirstOrDefault()?.Name}");
+            else
+                Console.WriteLine("Non ci sono animali in gabbia");
             Console.WriteLine($"Il numero di pasti è: {_database.Meals.Count}");
             Space();
         }
