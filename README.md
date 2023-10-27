@@ -1,5 +1,48 @@
 # Prova di esame
 
+## Testo
+
+Esame di Programmazione C#
+
+Durata: 3 ore
+
+Titolo: ZooManager
+
+L'applicazione "ZooManager" è un gestore che consente di gestire un database di animali e gabbie di uno zoo. 
+L'applicazione ZooManager dovrà consentire agli utenti di gestire animali e gabbie di uno zoo, aggiungendo, cancellando e modificando le informazioni nel database. 
+Inoltre, permetterà di registrare i pasti dati agli animali. 
+L'applicazione salverà e caricherà lo stato del database da un file json per preservare i dati tra le diverse esecuzioni.
+
+L'applicazione dovrà includere le seguenti classi:
+
+1. "Animal": rappresenta un animale nello zoo e ha le seguenti proprietà: "Id" (identificativo dell'animale), "Name" (nome dell'animale), "Kind" (specie animale) e "Food" (tipologia di cibo mangiato). 
+
+2. "Cage": rappresenta una gabbia nello zoo e ha le seguenti proprietà: "Id" (identificativo della gabbia), "Name" (nome della gabbia) e "Animals" (lista degli identificativi degli animali presenti nella gabbia).
+
+3. "FoodLog": rappresenta un registro dei pasti dati agli animali e ha le seguenti proprietà: "AnimalId" (identificativo dell'animale), "Food" (tipo di cibo dato) e "Timestamp" (data e ora del pasto).
+
+4. "Database": rappresenta il database dello zoo e ha le seguenti liste: "Animals" (lista degli animali presenti nello zoo), "Cages" (lista delle gabbie presenti nello zoo) e "Meals" (registro dei pasti degli animali).
+
+5. "ZooManager": rappresenta il gestore dell'applicazione. Ha un percorso del file per il database come costante, un oggetto di tipo Database come variabile privata e include i seguenti metodi:
+
+- "Load": carica lo stato del database dal file in formato JSON.
+- "Start": avvia l'applicazione e richiede all'utente di inserire i comandi per interagire con il database.
+- "Summary": mostra un riassunto della situazione attuale del database, incluso il numero di animali, il numero di gabbie, la gabbia con il maggior numero di animali e il numero di pasti registrati.
+- "GetCommand": chiede all'utente di inserire un comando specifico.
+- "Space": stampa una spaziatura vuota nella console.
+- "SetCommand": invoca i metodi appropriati in base al comando scelto dall'utente.
+- "AddAnimal": aggiunge un nuovo animale al database, richiedendo all'utente di inserire il nome dell'animale, il tipo di cibo e la specie animale.
+- "DeleteAnimal": cancella un animale dal database, richiedendo all'utente di inserire il nome dell'animale da cancellare.
+- "AddCage": aggiunge una nuova gabbia al database, richiedendo all'utente di inserire il nome della gabbia.
+- "DeleteCage": cancella una gabbia dal database, richiedendo all'utente di inserire il nome della gabbia da cancellare.
+- "AddAnimalToCage": aggiunge un animale a una gabbia, richiedendo all'utente di inserire il nome dell'animale da aggiungere e il nome della gabbia in cui aggiungerlo.
+- "RemoveAnimalFromCage": rimuove un animale da una gabbia, richiedendo all'utente di inserire il nome dell'animale da rimuovere e il nome della gabbia in cui si trova.
+- "FeedAnimal": registra un pasto dato a un animale, richiedendo all'utente di inserire il nome dell'animale da sfamare.
+- "Save": salva lo stato attuale del database su un file in formato JSON.
+
+Buon lavoro!
+
+
 ## Richiesta
 
 Il codice deve rappresentare un'applicazione per la gestione di uno zoo. 
