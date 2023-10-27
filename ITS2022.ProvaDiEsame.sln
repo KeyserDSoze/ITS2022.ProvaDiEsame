@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34212.112
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS2022.Zoo.Library", "ITS2022.Zoo.Library\ITS2022.Zoo.Library.csproj", "{23F9B77D-C820-4C38-BB83-04F57A92F6FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITS2022.Zoo.Library", "ITS2022.Zoo.Library\ITS2022.Zoo.Library.csproj", "{23F9B77D-C820-4C38-BB83-04F57A92F6FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITS2022.Zoo.App", "ITS2022.Zoo.App\ITS2022.Zoo.App.csproj", "{CA1F4930-1BEC-4820-ACC7-2770D95621FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITS2022.Zoo.App", "ITS2022.Zoo.App\ITS2022.Zoo.App.csproj", "{CA1F4930-1BEC-4820-ACC7-2770D95621FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C9B5620-EDCF-42EC-AFCC-034A9E14FF77}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
