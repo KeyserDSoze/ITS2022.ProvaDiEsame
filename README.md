@@ -43,7 +43,7 @@ L'applicazione dovrà includere le seguenti classi:
 Buon lavoro!
 
 
-## Richiesta
+## Possibili classi
 
 Il codice deve rappresentare un'applicazione per la gestione di uno zoo. 
 
