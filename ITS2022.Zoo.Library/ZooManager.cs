@@ -22,8 +22,8 @@ namespace ITS2022.Zoo.Library
         {
             if (File.Exists(DatabasePath))
             {
-                var database = File.ReadAllText(DatabasePath);
-                _database = JsonSerializer.Deserialize<Database>(database);
+                var databaseAsJson = File.ReadAllText(DatabasePath);
+                _database = JsonSerializer.Deserialize<Database>(databaseAsJson);
             }
             else
             {
