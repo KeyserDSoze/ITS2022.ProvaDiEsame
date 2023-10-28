@@ -23,13 +23,16 @@ L'applicazione dovrà includere le seguenti classi:
 
 4. "Database": rappresenta il database dello zoo e ha le seguenti liste: "Animals" (lista degli animali presenti nello zoo), "Cages" (lista delle gabbie presenti nello zoo) e "Meals" (registro dei pasti degli animali).
 
-5. "ZooManager": rappresenta il gestore dell'applicazione. Ha un percorso del file per il database come costante, un oggetto di tipo Database come variabile privata e include i seguenti metodi:
+5. "ZooManager": rappresenta il gestore dell'applicazione. 
+
+### Esempio Zoo Manager 
+
+Ha un percorso del file per il database come costante, un oggetto di tipo Database come variabile privata e include i seguenti metodi:
 
 - "Load": carica lo stato del database dal file in formato JSON.
 - "Start": avvia l'applicazione e richiede all'utente di inserire i comandi per interagire con il database.
 - "Summary": mostra un riassunto della situazione attuale del database, incluso il numero di animali, il numero di gabbie, la gabbia con il maggior numero di animali e il numero di pasti registrati.
 - "GetCommand": chiede all'utente di inserire un comando specifico.
-- "Space": stampa una spaziatura vuota nella console.
 - "SetCommand": invoca i metodi appropriati in base al comando scelto dall'utente.
 - "AddAnimal": aggiunge un nuovo animale al database, richiedendo all'utente di inserire il nome dell'animale, il tipo di cibo e la specie animale.
 - "DeleteAnimal": cancella un animale dal database, richiedendo all'utente di inserire il nome dell'animale da cancellare.
