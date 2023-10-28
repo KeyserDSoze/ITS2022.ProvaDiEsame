@@ -14,7 +14,7 @@
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// Lista degi animali che vivono in questa gabbia. Lista degli identificativi.
+        /// Lista degli identificativi degli animali che vivono in questa gabbia.
         /// </summary>
         public List<string> Animals { get; set; } = new List<string>();
     }

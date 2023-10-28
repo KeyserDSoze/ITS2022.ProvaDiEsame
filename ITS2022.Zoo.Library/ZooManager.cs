@@ -14,7 +14,7 @@ namespace ITS2022.Zoo.Library
         /// <summary>
         /// oggetto database
         /// </summary>
-        private Database _database = new Database();
+        private Database _database;
         /// <summary>
         /// Caricamento dello stato dal database in formato json
         /// </summary>
@@ -24,6 +24,10 @@ namespace ITS2022.Zoo.Library
             {
                 var database = File.ReadAllText(DatabasePath);
                 _database = JsonSerializer.Deserialize<Database>(database);
+            }
+            else
+            {
+                _database = new Database();
             }
         }
         /// <summary>
@@ -152,7 +156,14 @@ namespace ITS2022.Zoo.Library
             var name = Console.ReadLine();
             var animal = _database.Animals.FirstOrDefault(x => x.Name == name);
             if (animal != null)
+            {
                 _database.Animals.Remove(animal);
+                var cages = _database.Cages.Where(x => x.Animals.Any(t => t == animal.Id));
+                foreach (var cage in cages)
+                {
+                    cage.Animals.Remove(animal.Id);
+                }
+            }
         }
         /// <summary>
         /// Aggiunta gabbia
@@ -208,7 +219,10 @@ namespace ITS2022.Zoo.Library
             var cage = _database.Cages.FirstOrDefault(x => x.Name == cageName);
             if (animal != null && cage != null)
             {
-                cage.Animals.Remove(animal.Id);
+                if (cage.Animals.Remove(animal.Id))
+                    Console.WriteLine("Correttamente rimosso");
+                else
+                    Console.WriteLine("Animale non presente in gabbia");
             }
         }
         /// <summary>

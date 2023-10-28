@@ -1,7 +1,7 @@
 ﻿namespace ITS2022.Zoo.Library
 {
     /// <summary>
-    /// Registro per tenere traccia dei pasti
+    /// Oggetto di registro per tenere traccia dei pasti
     /// </summary>
     public class FoodLog
     {
